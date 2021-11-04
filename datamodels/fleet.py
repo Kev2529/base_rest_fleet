@@ -9,7 +9,7 @@ class FleetVehicleBasicInfo(Datamodel):
 
     id = fields.Integer(required=True, allow_none=False)
     name = fields.String(required=True, allow_none=False)
-    vehicle_type = NestedModel("fleet.vehicle.type")
+    # vehicle_type = NestedModel("fleet.vehicle.type")
     driver = NestedModel("fleet.driver")
 
 class FleetVehicleInfo(Datamodel):
@@ -37,8 +37,8 @@ class FleetVehicleBrand(Datamodel):
 class FleetDriver(Datamodel):
     _name = "fleet.driver"
 
-    id = fields.Integer(required=True, allow_none=False)
-    name = fields.String(required=True, allow_none=False)
+    id = fields.Integer(required=False, allow_none=True)
+    name = fields.String(required=False, allow_none=True)
 
 
 class FleetSearchParam(Datamodel):
@@ -46,6 +46,6 @@ class FleetSearchParam(Datamodel):
 
     id = fields.Integer(required=False, allow_none=True)
     name = fields.String(required=False, allow_none=True)
-    vehicle_type = fields.String(required=False, allow_none=True, load_default="car")
+    # vehicle_type = fields.String(required=False, allow_none=True, load_default="car")
     license_plate = fields.String(required=False, allow_none=True)
     driver = fields.String(required=False, allow_none=True)

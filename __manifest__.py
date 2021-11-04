@@ -8,7 +8,7 @@
     "version": "1.0.0",
     "author": "Kevin MASSON",
     "website": "",
-    "depends": ["base_rest", "datamodel", "fleet"],
+    "depends": ["base_rest_datamodel", "fleet"],
     "data": [],
     "demo": [],
     "installable": True,
